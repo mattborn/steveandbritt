@@ -1,0 +1,86 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700|Lusitana|Parisienne);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@font-face {
+	font-family: 'StateFaceRegular';
+	src: url('stateface/stateface-regular-webfont.eot');
+	src: url('stateface/stateface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('stateface/stateface-regular-webfont.woff') format('woff'),
+		url('stateface/stateface-regular-webfont.ttf') format('truetype'),
+		url('stateface/stateface-regular-webfont.svg#StateFaceRegular') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* http://www.colourlovers.com/palette/3285423/Swim_Free */
+
+* { -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html { color: #001e42; font: 13px/1 'Montserrat', sans-serif; }
+
+body { max-width: 600px; margin: 0 auto; padding: 30px 0; text-align: center; }
+
+h1 { font: 36px 'Lusitana', serif; margin: 0 0 5px; }
+h2 {
+	font-size: 11px;
+	letter-spacing: .1em;
+	margin: 0 0 30px;
+	text-transform: uppercase;
+}
+
+a { color: inherit; text-decoration: initial; transition: color .5s; }
+a:hover { color: #f89e0a; }
+
+img { max-width: 100%; margin-bottom: 30px; vertical-align: bottom; }
+
+h3 {
+	font-size: 11px;
+	letter-spacing: .1em;
+	margin: 0 0 5px;
+	text-transform: uppercase;
+}
+h4 {
+	border-bottom: 1px solid #ddd;
+	font: 20px 'Parisienne', serif;
+	margin: 0 0 30px;
+	opacity: .5;
+	padding-bottom: 25px;
+}
+
+ul { list-style-type: none; margin: 0; padding: 0; }
+ul:after { clear: both; content: ''; display: table; }
+li {
+	width: 200px;
+	float: left;
+	padding: 15px;
+}
+.icon { display: block; font-size: 30px; line-height: 60px; }
+li > b { letter-spacing: .1em; text-transform: uppercase; }
+
+address {
+	font-style: initial;
+	line-height: 1.5;
+	margin-top: 30px;
+	opacity: .5;
+}
+address b { display: block; font-size: 14px; }
+address .fa-asterisk { font-size: 10px; vertical-align: super; }
+
+p { line-height: 1.5; padding: 0 20px; }
+p span { opacity: .5; }
+
+.fa-asterisk { color: #f89e0a; }
+
+.heart-nc { width: 300px; border-top: 1px solid #ddd; margin: 50px auto; position: relative; }
+.heart-nc .fa-heart {
+	color: #f89e0a;
+	position: absolute;
+	top: 85px; left: 170px;
+}
+.north-carolina { font: 150px/200px 'StateFaceRegular'; }
+
+::selection { background: #f89e0a; }
+
+@media (max-width: 568px) {
+	li { width: 100%; float: none; }
+}
