@@ -1,3 +1,169 @@
 @import "shared";
 
 //  UI version 2
+
+html {
+	color: $navy;
+	font: 14px/1 Montserrat, sans-serif;
+	letter-spacing: .02em;
+}
+
+body {}
+
+a { color: inherit;
+	&:hover {
+		color: $orange;
+		text-decoration: underline;
+	}
+}
+
+.left,
+.center,
+.right { padding: 40px;
+
+	@media #{$desktop} { padding: 20px; }
+	@media #{$tablet} { padding: 40px; }
+	@media #{$phone} { padding: 20px; }
+}
+
+.left,
+.right { @include position(fixed, 0 null null null); }
+
+.left { width: 25%;
+
+	@media #{$tablet} { display: none; }
+
+	&-a {
+		display: block;
+		font: 24px/40px "Lusitana", Georgia, serif;
+		text-decoration: none;
+	}
+}
+
+.center {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+
+	@media #{$tablet} { width: 100%; }
+}
+
+.right {
+	width: 25%;
+	right: 0;
+	text-align: right;
+
+	@media #{$tablet} {
+		width: 100%;
+		position: relative;
+		text-align: center;
+	}
+
+	&-h2 {
+		font-size: 20px;
+		margin: 1.5em 0 .75em;
+
+		&:first-child { margin-top: 0; }
+	}
+	&-rsvp {
+		background: $navy;
+		border-radius: 5px;
+		color: white;
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 10px;
+		text-align: center;
+		text-decoration: none;
+		-webkit-font-smoothing: antialiased;
+
+		&:hover {
+			background: $orange;
+			color: $navy;
+		}
+	}
+	&-a {
+		display: block;
+		line-height: 20px;
+	}
+}
+
+.header {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 40px;
+	padding-bottom: 25px;
+
+	&-title { font: 36px Lusitana, serif; margin: 0 0 5px; }
+	&-date {
+		font-size: 11px;
+		letter-spacing: .1em;
+		margin: 0 0 30px;
+		text-transform: uppercase;
+	}
+
+	&-img { max-width: 100%; margin-bottom: 30px; vertical-align: bottom; }
+
+	&-durham {
+		font-size: 11px;
+		letter-spacing: .1em;
+		margin: 0 0 5px;
+		text-transform: uppercase;
+	}
+	&-nc {
+		font: 20px Parisienne, serif;
+		opacity: .5;
+	}
+}
+
+section {
+	padding: 40px 0;
+
+	&::after {
+		width: 10%;
+		border: 2px dotted $orange;
+		content: "";
+		display: inline-block;
+		// color: $orange;
+		// content: "\f141";
+		// display: block;
+		// font: 20px FontAwesome;
+		margin-top: 60px;
+	}
+
+	> i,
+	h2 {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	time {
+		color: lighten($navy, 50%);
+		display: block;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	h3 {
+		font-size: 15px;
+		margin: 1.5em 0 .75em;
+	}
+	address,
+	p {
+		line-height: 1.5;
+		margin-bottom: 1em;
+	}
+	p,
+	small,
+	blockquote { color: lighten($navy, 50%); }
+	address { white-space: pre-line; }
+	ul { padding: 20px 0; }
+	li {
+		font-size: 15px;
+		line-height: 20px;
+		margin-bottom: 20px;
+	}
+	small {
+		display: block;
+		font-size: 12px;
+	}
+	blockquote { font-size: 20px; }
+}
+
+#durham li { padding: 0 10%; }
