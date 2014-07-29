@@ -16,6 +16,7 @@
 		"grunt-contrib-watch": "*",
 		"grunt-newer": "*",
 		"grunt-sass": "*",
+		"grunt-s3-sync": "*",
 		"node-bourbon": "*"
 	}
 }

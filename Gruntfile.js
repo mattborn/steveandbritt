@@ -40,6 +40,21 @@ module.exports = function (grunt) {
 			dev: {
 				options: { port: 10414 }
 			}
+		},
+		aws: grunt.file.readJSON('aws.json'),
+		's3-sync': {
+		    options: {
+				key: '<%= aws.key %>',
+				secret: '<%= aws.secret %>',
+				bucket: '<%= aws.bucket %>'
+		    },
+		    prod: {
+				files: [{
+					root: __dirname,
+					src: ['original/*', '*.html', '*.css'],
+					dest: 'steveandbritt.com'
+				}]
+		    }
 		}
 	});
 
@@ -48,12 +63,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-s3-sync');
 
 	grunt.registerTask('build', [
 		'newer:assemble',
 		'newer:sass'
 	]);
 
+	grunt.registerTask('deploy', ['build', 's3-sync:prod']);
 	grunt.registerTask('default', ['build', 'connect', 'watch']);
 
 };
