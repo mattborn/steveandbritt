@@ -1,0 +1,21 @@
+{
+	"name": "steveandbritt",
+	"version": "1.1.0",
+
+	"author": "Matt Born <me+code@mattborn.com>",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/mattborn/steveandbritt.git"
+	},
+
+	"devDependencies": {
+		"grunt": "*",
+		"grunt-assemble": "*",
+		"grunt-contrib-clean": "*",
+		"grunt-contrib-connect": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-newer": "*",
+		"grunt-sass": "*",
+		"node-bourbon": "*"
+	}
+}
