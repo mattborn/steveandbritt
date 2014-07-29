@@ -3,11 +3,11 @@
 
 @font-face {
 	font-family: 'StateFaceRegular';
-	src: url('stateface/stateface-regular-webfont.eot');
-	src: url('stateface/stateface-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('stateface/stateface-regular-webfont.woff') format('woff'),
-		url('stateface/stateface-regular-webfont.ttf') format('truetype'),
-		url('stateface/stateface-regular-webfont.svg#StateFaceRegular') format('svg');
+	src: url('../stateface/stateface-regular-webfont.eot');
+	src: url('../stateface/stateface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../stateface/stateface-regular-webfont.woff') format('woff'),
+		url('../stateface/stateface-regular-webfont.ttf') format('truetype'),
+		url('../stateface/stateface-regular-webfont.svg#StateFaceRegular') format('svg');
 	font-style: normal;
 	font-weight: normal;
 }
