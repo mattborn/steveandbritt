@@ -2,13 +2,18 @@
 
 //  UI version 2
 
+html,
+body {
+	width: 100%;
+	overflow: hidden;
+}
+
 html {
 	color: $navy;
 	font: 14px/1 Montserrat, sans-serif;
 	letter-spacing: .02em;
+	-webkit-text-size-adjust: none;
 }
-
-body {}
 
 a { color: inherit;
 	&:hover {
