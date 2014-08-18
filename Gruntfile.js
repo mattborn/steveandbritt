@@ -51,7 +51,7 @@ module.exports = function (grunt) {
 		    prod: {
 				files: [{
 					root: __dirname,
-					src: ['original/*', '*.html', '*.css', 'favicon.ico'],
+					src: ['original/*', '*.html', '*.css', '*.js', 'favicon.ico'],
 					dest: 'steveandbritt.com'
 				}]
 		    }
